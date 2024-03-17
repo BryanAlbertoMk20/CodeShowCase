@@ -18,6 +18,11 @@
         object-fit: cover;
         margin-bottom: 16px;
       }
+
+      #work {
+        object-fit: cover;
+        margin-left: 120px;
+      }
     </style>
   </head>
 
@@ -40,11 +45,21 @@
 
       <h2 class="text-center mt-2 mb-4">App Names</h2>
 
-      <div>{% for ap in aps %} {% include 'appitem.html'%} {% endfor %}</div>
-
-      <div class="text-center">
-        <a class="btn btn-primary btn-lg">Contact Us</a>
+      <div id="work">
+        {% for ap in aps %} {% include 'appitem.html'%} {% endfor %}
       </div>
+
+      <div class="text-center" style="padding-top: 100px">
+        <a
+          href="mailto:bryanalberto1@live.com?subject"
+          ="A%20few%20questions%20about%20the%20site.&body"
+          ="Please%20type%20your%20questions%20bellow%20and%20I%20will%20get%20to%20them%20as%20soon%20as%20possible.%20Thank%20You!"
+          class="btn btn-primary btn-lg"
+          >Contact Us</a
+        >
+      </div>
+
+      <div>{% include 'footer.html' %}</div>
     </div>
   </body>
 </html>
